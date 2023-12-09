@@ -31,6 +31,20 @@ document.getElementById('content').value = '';
 document.getElementById('tags').value = '';
 }
 
-fetch('https://dummyjson.com/posts')
-.then(res => res.json())
-.then(console.log);
+let postListElement = document.getElementById("post-list");
+let posts = [];
+
+function fetchPosts(callback) {
+  fetch('https://dummyjson.com/posts')
+    .then(res => res.json())
+    .then(function (json) {
+      callback(json.posts);
+    });
+}
+
+fetchPosts((posts) => {
+    for (let i = 0; i < posts.length; i++) {
+      renderNewPost(posts[i]);
+    }
+  })
+  
