@@ -1,72 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reddit</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Reddit</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  News
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Sport</a></li>
-                  <li><a class="dropdown-item" href="#">Politics</a></li>
-                  <li><a class="dropdown-item" href="#">Weather</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-    <h2>Reddit</h2>
-    <div id="new-post-form">
-        <h3>Skapa nytt inlägg</h3>
-        <label for="title">Titel:</label>
-        <input type="text" id="title" placeholder="Skriv titel">
+    
+  <div class="topnav">
+    <a class="logo" href="#Reddit">Reddit</a>
+    <a href="#">Gaming</a>
+    <a href="#">Sports</a>
+    <a href="#">Business</a>
+    <a href="#">About</a>
+    <a href="#">Help</a>
+    <a href="#">Contact</a>
 
-        <label for="content">Innehåll:</label>
-        <input id="content" placeholder="Skriv innehåll">
 
-        <label for="tags">Tags:</label>
-        <input type="text" id="tags" placeholder="Skriv Tags">
-
-        <button onclick="createNewPost()">Skapa inlägg</button>
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
     </div>
+  </div>
 
-    <div id="posts-container"></div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-    <script src ="script.js"></script>
+  <div id="new-post-form">
+    <h3>Skapa nytt inlägg</h3>
+    <label for="title">Titel:</label>
+    <input type="text" id="title" placeholder="Skriv titel">
+
+    <label for="content">Innehåll:</label>
+    <input id="content" placeholder="Skriv innehåll">
+
+    <label for="tags">Tags:</label>
+    <input type="text" id="tags" placeholder="Skriv Tags">
+
+    <button onclick="createNewPost()">Skapa inlägg</button>
+  </div>
+
+  <div id="posts-container"></div>
+
+
+
+  <script src="script.js"></script>
 </body>
 
 </html>
